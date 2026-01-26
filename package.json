@@ -1,14 +1,19 @@
 {
-  "name": "pleasant",
   "type": "module",
+  "name": "pleasant",
   "version": "0.0.1",
+  "dependencies": {
+    "@fontsource/dm-sans": "^5.2.8",
+    "@fontsource/mali": "^5.2.8",
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.16.15",
+    "astro-seo": "^1.1.0",
+    "tailwindcss": "^4.1.18"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^5.16.15"
   }
 }

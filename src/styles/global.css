@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-lilac-50: #f8f7fb;
+  --color-lilac-100: #f2f0f7;
+  --color-lilac-200: #e7e3f1;
+  --color-lilac-300: #d4cde5;
+  --color-lilac-400: #bcb0d5;
+  --color-lilac-500: #a38fc3;
+  --color-lilac-600: #9176b1;
+  --color-lilac-700: #7f639e;
+  --color-lilac-800: #6a5384;
+  --color-lilac-900: #58456d;
+  --color-lilac-950: #382c49;
+
+  --font-display: 'Mali', cursive;
+  --font-sans: 'DM Sans', sans-serif;
+}

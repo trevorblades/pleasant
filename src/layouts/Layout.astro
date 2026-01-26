@@ -1,0 +1,32 @@
+---
+import type { ComponentProps } from "astro/types";
+import "~/styles/global.css";
+import { SEO } from "astro-seo";
+import dmSans400 from "@fontsource/dm-sans/400.css?url";
+import dmSans500 from "@fontsource/dm-sans/500.css?url";
+import dmSans600 from "@fontsource/dm-sans/600.css?url";
+import mali from "@fontsource/mali/700-italic.css?url";
+
+type Props = ComponentProps<typeof SEO>;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href={dmSans400} />
+    <link rel="stylesheet" href={dmSans500} />
+    <link rel="stylesheet" href={dmSans600} />
+    <link rel="stylesheet" href={mali} />
+    <SEO
+      titleDefault="Pleasant Coffee Co."
+      titleTemplate="%s - Pleasant Coffee Co."
+      {...Astro.props}
+    />
+  </head>
+  <body class="text-zinc-900">
+    <slot />
+  </body>
+</html>

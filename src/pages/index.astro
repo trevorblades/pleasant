@@ -1,17 +1,24 @@
 ---
-
+import Layout from "~/layouts/Layout.astro";
+import Logo from "~/assets/logo.svg";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <div class="min-h-screen bg-lilac-300 flex">
+    <div class="text-center space-y-10 m-auto">
+      <Logo class="size-60 mx-auto" />
+      <div class="space-y-4">
+        <div class="space-y-4 text-5xl">
+          <p>Something <span class="font-display tracking-tighter">pleasant</span> is brewing in Port Moody...</p>
+          <p>
+            <a
+              class="not-hover:underline"
+              href="https://instagram.com/pleasantcoffee.ca"
+              >Follow us on Instagram</a
+            > for updates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
