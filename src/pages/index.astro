@@ -5,11 +5,41 @@ import Logo from "~/assets/logo.svg";
 import Layout from "~/layouts/Layout.astro";
 ---
 
+<script>
+  import { animate, stagger } from "motion";
+
+  const logo = document.querySelector("[data-animateclass='logo']");
+  const text = document.querySelector("[data-animateclass='text']");
+  const elements = [logo, text];
+
+  if (elements.length > 0) {
+    animate(
+      elements,
+      { opacity: [0, 1] },
+      {
+        type: "tween",
+        duration: 1.5,
+        delay: stagger(0.25, { startDelay: 0.25 }),
+      },
+    );
+    animate(
+      [logo],
+      { y: [5, 0] },
+      {
+        type: "tween",
+        duration: 1,
+        repeat: Infinity,
+        repeatType: "mirror",
+      },
+    );
+  }
+</script>
+
 <Layout>
-  <div class="flex min-h-screen bg-lilac-300">
+  <div class="flex min-h-screen bg-lilac-300" data-animateclass="container">
     <div class="m-auto space-y-8 p-8 text-center">
-      <Logo class="mx-auto size-40" />
-      <div class="space-y-6">
+      <Logo class="mx-auto size-40" data-animateclass="logo" />
+      <div class="space-y-6" data-animateclass="text">
         <p class="text-4xl">
           Something <span class="font-display font-bold tracking-tighter italic"
             >pleasant</span
