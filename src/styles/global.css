@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@plugin "tailwindcss-motion";
+
 @theme {
   --color-lilac-50: #f8f7fb;
   --color-lilac-100: #f2f0f7;
