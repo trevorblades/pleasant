@@ -1,26 +1,31 @@
 ---
+import Instagram from "~/assets/icons/instagram.svg";
 import Logo from "~/assets/logo.svg";
 import Layout from "~/layouts/Layout.astro";
 ---
 
 <Layout>
   <div class="flex min-h-screen bg-lilac-300">
-    <div class="m-auto space-y-10 text-center">
-      <Logo class="mx-auto size-60" />
-      <div class="space-y-4">
-        <div class="space-y-4 text-5xl">
-          <p>
-            Something <span class="font-display tracking-tighter">pleasant</span
-            > is brewing in Port Moody...
-          </p>
-          <p>
-            <a
-              class="not-hover:underline"
-              href="https://instagram.com/pleasantcoffee.ca"
-              >Follow us on Instagram</a
-            > for updates.
-          </p>
-        </div>
+    <div class="m-auto space-y-8 p-8 text-center">
+      <Logo class="mx-auto size-40" />
+      <div class="space-y-6">
+        <p class="text-4xl">
+          Something <span class="font-display tracking-tighter">pleasant</span> is
+          brewing...
+        </p>
+        <a
+          class={`
+            inline-flex h-12 items-center gap-2 rounded-lg border-2
+            border-zinc-900 bg-white px-4 font-medium transition-all
+            hover:bg-zinc-900 hover:text-white
+            active:scale-95
+          `}
+          target="_blank"
+          href="https://instagram.com/pleasantcoffee.ca"
+        >
+          <Instagram class="size-5 fill-current" />
+          Follow us for updates
+        </a>
       </div>
     </div>
   </div>
