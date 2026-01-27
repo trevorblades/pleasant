@@ -6,40 +6,33 @@ import Layout from "~/layouts/Layout.astro";
 ---
 
 <script>
-  import { animate, inView, stagger } from "motion";
+  import { animate, stagger } from "motion";
 
-  inView(
-    "[data-animateclass='container']",
-    (element) => {
-      const logo = element.querySelector("[data-animateclass='logo']");
-      const text = element.querySelector("[data-animateclass='text']");
-      const elements = [logo, text];
+  const logo = document.querySelector("[data-animateclass='logo']");
+  const text = document.querySelector("[data-animateclass='text']");
+  const elements = [logo, text];
 
-      if (elements.length > 0) {
-        animate(
-          elements,
-          { opacity: [0, 1] },
-          {
-            type: "tween",
-            duration: 1.5,
-            delay: stagger(0.25, { startDelay: 0.25 }),
-          },
-        );
-        animate(
-          [logo],
-          { y: [5, 0] },
-          {
-            type: "tween",
-            duration: 1,
-            delay: stagger(0.5, { startDelay: 0.5 }),
-            repeat: Infinity,
-            repeatType: "mirror",
-          },
-        );
-      }
-    },
-    { amount: 0.25 },
-  );
+  if (elements.length > 0) {
+    animate(
+      elements,
+      { opacity: [0, 1] },
+      {
+        type: "tween",
+        duration: 1.5,
+        delay: stagger(0.25, { startDelay: 0.25 }),
+      },
+    );
+    animate(
+      [logo],
+      { y: [5, 0] },
+      {
+        type: "tween",
+        duration: 1,
+        repeat: Infinity,
+        repeatType: "mirror",
+      },
+    );
+  }
 </script>
 
 <Layout>
