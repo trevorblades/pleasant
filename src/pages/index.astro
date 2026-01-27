@@ -8,8 +8,12 @@ import Layout from "~/layouts/Layout.astro";
 <Layout>
   <div class="flex min-h-screen bg-lilac-300">
     <div class="m-auto space-y-8 p-8 text-center">
-      <Logo class="mx-auto size-40" />
-      <div class="space-y-6">
+      <Logo
+        class="motion-opacity-in-0 motion-delay-250/opacity motion-translate-y-loop-[5px] motion-duration-1500/translate motion-ease-in-out mx-auto size-40"
+      />
+      <div
+        class="space-y-6 motion-delay-500/opacity motion-opacity-in-0 motion-duration-1500 motion-ease-spring-smooth"
+      >
         <p class="text-4xl">
           Something <span class="font-display font-bold tracking-tighter italic"
             >pleasant</span
