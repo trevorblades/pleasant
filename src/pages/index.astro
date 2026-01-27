@@ -1,5 +1,6 @@
 ---
-import Instagram from "~/assets/icons/instagram.svg";
+import { SiInstagram } from "@icons-pack/react-simple-icons";
+
 import Logo from "~/assets/logo.svg";
 import Layout from "~/layouts/Layout.astro";
 ---
@@ -14,16 +15,11 @@ import Layout from "~/layouts/Layout.astro";
           brewing...
         </p>
         <a
-          class={`
-            inline-flex h-12 items-center gap-2 rounded-lg border-2
-            border-zinc-900 bg-white px-4 font-medium transition-all
-            hover:bg-zinc-900 hover:text-white
-            active:scale-95
-          `}
+          class="btn"
           target="_blank"
           href="https://instagram.com/pleasantcoffee.ca"
         >
-          <Instagram class="size-5 fill-current" />
+          <SiInstagram className="size-5 fill-current" />
           Follow us for updates
         </a>
       </div>
